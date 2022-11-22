@@ -17,7 +17,7 @@ Getting started
     MANAGERS = 1 #Number of managers
     MANAGER_IP = "172.20.20.1" #Manager IP
     WORKERS = 3 #Number of workers
-    WORKER_IP = "172.20.20.10" #Workers ip
+    WORKER_IP = "172.20.20.10" #Workers IP
     CPUS = 2 #Number of CPUs allocated to each machine
     VAGRANTFILE_API_VERSION = "2" #Vagrantfile version
     ```
