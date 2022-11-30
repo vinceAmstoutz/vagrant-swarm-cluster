@@ -11,6 +11,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 sudo usermod -aG docker vagrant
 newgrp docker
+sudo rm get-docker.sh
 SCRIPT
 
 $manager_script = <<SCRIPT
@@ -45,6 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = BOX_DISTRIBUTION
     config.vm.synced_folder ".", "/vagrant"
     config.vm.provision "shell",inline: $install_docker_script, privileged: true
+    config.ssh.insert_key = false #Prevent SSH key overwriting
     #Setup Manager Nodes
     (1..MANAGERS).each do |i|
         config.vm.define "manager0#{i}" do |manager|
