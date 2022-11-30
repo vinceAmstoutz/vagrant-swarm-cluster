@@ -1,6 +1,8 @@
-# Docker Swarm Cluster with Vagrant
+# Docker Swarm Cluster for WordPress + DB
 
-Project to install a ``Docker Swarm cluster`` thanks to ``Vagrant``.
+About
+An enterprise workshop to put `Docker Swarm` into practice by deploying a 
+`WordPress` application with `DB`.
 
 Getting started
 ---------------
@@ -31,7 +33,7 @@ Other commands
 
 Otherwise :
 - Remove all managers & workers resources : `make remove` or `vagrant destroy`
-- Suspend all machines in their current state with `make pause` or `vagrant suspend`
+- Suspend all machines with `make stop` or `vagrant halt`
 
 License
 -------
